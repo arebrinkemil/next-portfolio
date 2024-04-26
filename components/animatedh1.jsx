@@ -5,6 +5,7 @@ const AnimatedH1 = ({ children }) => {
   const color = "#9e9b94";
   const shadowColor = "#522222";
   const duration = 0.7;
+  const letters = children.split("");
 
   if (children === "EMIL ÅREBRINK") {
     animation = (
@@ -31,7 +32,11 @@ const AnimatedH1 = ({ children }) => {
           style={{ color: color }}
           className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold font-poppins"
         >
-          {children}
+          {letters.map((letter, index) => (
+            <motion.span key={index} whileHover={{ color: "#ffffff" }}>
+              {letter}
+            </motion.span>
+          ))}
         </h1>
       </motion.div>
     );
@@ -57,9 +62,13 @@ const AnimatedH1 = ({ children }) => {
       >
         <h1
           style={{ color: color }}
-          className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold"
+          className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold font-poppins"
         >
-          {children}
+          {letters.map((letter, index) => (
+            <motion.span key={index} whileHover={{ color: "#ffffff" }}>
+              {letter}
+            </motion.span>
+          ))}
         </h1>
       </motion.div>
     );
@@ -86,9 +95,13 @@ const AnimatedH1 = ({ children }) => {
       >
         <h1
           style={{ color: color }}
-          className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold"
+          className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold font-poppins"
         >
-          {children}
+          {letters.map((letter, index) => (
+            <motion.span key={index} whileHover={{ color: "#ffffff" }}>
+              {letter}
+            </motion.span>
+          ))}
         </h1>
       </motion.div>
     );
