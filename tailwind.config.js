@@ -12,7 +12,18 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-fluid-type")({
+      values: {
+        "7xl": [10, 1.2],
+        "8xl": [12, 1.2],
+        "9xl": [14, 1.2],
+      },
+    }),
+  ],
 };
