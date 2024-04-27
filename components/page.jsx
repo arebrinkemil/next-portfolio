@@ -12,7 +12,7 @@ export default function Page({ children }) {
         />
       </Head>
       <Header />
-      <main className="h-screen bg-[#9e9b94] justify-center flex items-center max-w-[100vw] overflow-x-clip">
+      <main className="h-screen bg-[#9e9b94] max-w-[100vw] overflow-x-clip">
         {children}
       </main>
       <div className="h-[150vh]">hello</div>

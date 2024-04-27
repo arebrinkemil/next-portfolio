@@ -17,6 +17,7 @@ module.exports = {
       },
     },
   },
+
   plugins: [
     require("tailwindcss-fluid-type")({
       values: {

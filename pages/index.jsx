@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Page from "@/components/page";
 import AnimatedH1 from "@/components/animatedh1";
+import Portfolio from "@/components/portfolio";
 
 export default function index() {
   const { scrollYProgress } = useScroll();
@@ -17,13 +18,20 @@ export default function index() {
   }, []);
 
   return (
-    <Page>
+    <Page className="flex flex-col">
       <motion.div
         style={{ backgroundColor }}
-        className="min-h-screen flex items-center w-full px-4"
+        className="min-h-screen flex flex-col items-center justify-center w-full px-4"
       >
         <AnimatedH1>EMIL ÅREBRINK</AnimatedH1>
+        <div className="h-full w-full flex flex-col justify-end text-[#9e9b94]">
+          <h2 className="font-poppins text-6xl font-bold text-nowrap">
+            WEB DEVELOPER
+          </h2>
+        </div>
       </motion.div>
+
+      <Portfolio />
     </Page>
   );
 }
