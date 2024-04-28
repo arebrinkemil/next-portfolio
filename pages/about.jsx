@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Page from "@/components/page";
 import AnimatedH1 from "@/components/animatedh1";
+import { Carousels } from "@/components/carousels";
 
 export default function About() {
   const { scrollYProgress } = useScroll();
@@ -24,6 +25,7 @@ export default function About() {
       >
         <AnimatedH1>WEB DEVELOPER</AnimatedH1>
       </motion.div>
+      <Carousels />
     </Page>
   );
 }

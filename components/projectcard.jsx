@@ -1,5 +1,8 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 import {
   Dialog,
   DialogContent,
@@ -9,6 +12,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { motion } from "framer-motion";
 
@@ -52,9 +62,32 @@ export default function ProjectCard({ project }) {
           </div>
         </motion.div>
       </DialogTrigger>
-      <DialogContent className="max-h-[90vh]">
+      <DialogContent className="max-h-[90vh] overflow-y-scroll overflow-x-hidden scrollable-content">
         <DialogHeader>
-          <DialogTitle>{project.title}</DialogTitle>
+          <DialogTitle>
+            <div className="flex flex-row justify-between items-center">
+              <h2>{project.title}</h2>
+              <div className="flex flex-row gap-2 mr-2">
+                {project.finished && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mr-2"
+                  >
+                    <FaExternalLinkAlt size={24} />
+                  </a>
+                )}
+                <a
+                  href={project.repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub size={24} />
+                </a>
+              </div>
+            </div>
+          </DialogTitle>
 
           <img
             className="w-full w-1/2 object-cover"
@@ -64,32 +97,22 @@ export default function ProjectCard({ project }) {
 
           <DialogDescription>{project.description}</DialogDescription>
         </DialogHeader>
-        <div className="flex">
-          <div className="flex flex-col gap-2">
-            <p>Languages: {project.languageArray.join(", ")}</p>
-            <p>Technologies: {project.technologyArray.join(", ")}</p>
-            {project.finished && (
-              <p>
-                Link:{" "}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.link}
-                </a>
-              </p>
-            )}
-            <p>
-              Repository:{" "}
-              <a
-                href={project.repository}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {project.repository}
-              </a>
-            </p>
+        <div className="flex w-full">
+          <div className="flex flex-col gap-2 w-full">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1" className="w-full">
+                <AccordionTrigger>Languages</AccordionTrigger>
+                <AccordionContent>
+                  <p> {project.languageArray.join(", ")}</p>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2" className="w-full">
+                <AccordionTrigger>Technologies</AccordionTrigger>
+                <AccordionContent>
+                  <p> {project.technologyArray.join(", ")}</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
         <DialogFooter></DialogFooter>

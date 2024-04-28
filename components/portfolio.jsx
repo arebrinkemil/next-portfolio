@@ -133,10 +133,12 @@ export default function Portfolio() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-16 mx-8 ">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+      <div className="flex flex-col items-center justify-center">
+        <div className="grid grid-cols-2  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 mx-8 xl:max-w-6xl">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
       </div>
     </>
   );

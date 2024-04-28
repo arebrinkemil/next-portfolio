@@ -134,3 +134,7 @@ body {
     background-color: #e7e7e7;
   }
 }
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
