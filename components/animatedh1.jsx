@@ -40,7 +40,7 @@ const AnimatedH1 = ({ children }) => {
         </h1>
       </motion.div>
     );
-  } else if (children === "ABOUT") {
+  } else if (children === "WEB DEVELOPER") {
     animation = (
       <motion.div
         initial={{
@@ -72,7 +72,7 @@ const AnimatedH1 = ({ children }) => {
         </h1>
       </motion.div>
     );
-  } else if (children === "CONTACT") {
+  } else if (children === "MESSAGE ME") {
     animation = (
       <motion.div
         initial={{

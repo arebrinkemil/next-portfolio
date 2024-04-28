@@ -15,6 +15,7 @@ export default function Page({ children }) {
       <main className="h-screen bg-[#9e9b94] max-w-[100vw] overflow-x-clip">
         {children}
       </main>
+      {/* placeholder to keep scroll */}
       <div className="h-[150vh]">hello</div>
     </div>
   );

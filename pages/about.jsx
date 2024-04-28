@@ -22,7 +22,7 @@ export default function About() {
         style={{ backgroundColor }}
         className="min-h-screen flex items-center justify-center w-full px-4"
       >
-        <AnimatedH1>ABOUT</AnimatedH1>
+        <AnimatedH1>WEB DEVELOPER</AnimatedH1>
       </motion.div>
     </Page>
   );

@@ -24,30 +24,35 @@ export default function ProjectCard({ project }) {
       <DialogTrigger asChild>
         <motion.div
           ref={ref}
-          className={`bg-white rounded-lg p-4  ${
+          className={`bg-white rounded-lg p-4 ${
             isInView ? "shadow-pop-tl" : ""
           }`}
         >
-          <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+          <h2 className=" text-lg md:text-xl font-bold mb-2">
+            {project.title}
+          </h2>
           <p className="text-gray-600 overflow-hidden overflow-ellipsis whitespace-nowrap">
             {project.description}
           </p>{" "}
-          <p className="text-gray-600">
+          <p className="text-gray-600 hidden md:block">
             Languages: {project.languageArray.join(", ")}
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-600 hidden md:block">
             Technologies: {project.technologyArray.join(", ")}
+          </p>
+          <p className="text-gray-600 md:hidden">
+            {project.technologyArray.join(", ")}
           </p>
           <div>
             <img
-              className="w-full h-24 object-cover mt-2"
+              className="w-full h-24 object-cover mt-2 hidden md:block"
               src={project.image}
               alt={project.title}
             />
           </div>
         </motion.div>
       </DialogTrigger>
-      <DialogContent className="">
+      <DialogContent className="max-h-[90vh]">
         <DialogHeader>
           <DialogTitle>{project.title}</DialogTitle>
 
@@ -59,17 +64,22 @@ export default function ProjectCard({ project }) {
 
           <DialogDescription>{project.description}</DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
+        <div className="flex">
+          <div className="flex flex-col gap-2">
             <p>Languages: {project.languageArray.join(", ")}</p>
             <p>Technologies: {project.technologyArray.join(", ")}</p>
-            <p>Date: {project.date}</p>
-            <p>
-              Link:{" "}
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                {project.link}
-              </a>
-            </p>
+            {project.finished && (
+              <p>
+                Link:{" "}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.link}
+                </a>
+              </p>
+            )}
             <p>
               Repository:{" "}
               <a

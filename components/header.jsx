@@ -51,7 +51,7 @@ function NavigationLink({ href, text, router, isFirstLoad }) {
   );
 
   return (
-    <div className="w-full flex flex-row justify-around text-4xl font-bold font-poppins">
+    <div className="w-full flex flex-row justify-around text-3xl md:text-4xl font-bold font-poppins">
       <Link href={href === "/home" ? "/" : href} passHref>
         <motion.div
           style={{ color: isActive ? textColor : "#ffffff" }}

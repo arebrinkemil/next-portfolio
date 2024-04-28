@@ -22,7 +22,7 @@ export default function Contact() {
         style={{ backgroundColor }}
         className="min-h-screen flex items-center justify-end w-full px-4"
       >
-        <AnimatedH1>CONTACT</AnimatedH1>
+        <AnimatedH1>MESSAGE ME</AnimatedH1>
       </motion.div>
     </Page>
   );
