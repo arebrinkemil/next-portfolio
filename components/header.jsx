@@ -17,7 +17,7 @@ export default function Header() {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.25],
-    ["#9e9b94", "#522222"],
+    ["#016fb9", "#E0DFDD"],
     "clamp"
   );
 
@@ -46,7 +46,7 @@ function NavigationLink({ href, text, router, isFirstLoad }) {
   const textColor = useTransform(
     scrollYProgress,
     [0, 0.25],
-    ["#522222", "#9e9b94"],
+    ["#FF6F59", "#016fb9"],
     "clamp"
   );
 

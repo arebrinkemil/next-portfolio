@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const AnimatedH1 = ({ children }) => {
   let animation;
-  const color = "#9e9b94";
-  const shadowColor = "#522222";
+  const color = "#016fb9";
+  const shadowColor = "#E0DFDD";
   const duration = 0.7;
   const letters = children.split("");
 
@@ -33,7 +33,7 @@ const AnimatedH1 = ({ children }) => {
           className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold font-poppins"
         >
           {letters.map((letter, index) => (
-            <motion.span key={index} whileHover={{ color: "#ffffff" }}>
+            <motion.span key={index} whileHover={{ color: "#E0DFDD" }}>
               {letter}
             </motion.span>
           ))}
@@ -65,7 +65,7 @@ const AnimatedH1 = ({ children }) => {
           className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold font-poppins"
         >
           {letters.map((letter, index) => (
-            <motion.span key={index} whileHover={{ color: "#ffffff" }}>
+            <motion.span key={index} whileHover={{ color: "#E0DFDD" }}>
               {letter}
             </motion.span>
           ))}
@@ -98,7 +98,7 @@ const AnimatedH1 = ({ children }) => {
           className="lg:text-9xl sm:text-8xl text-7xl font-semibold lg:font-bold font-poppins"
         >
           {letters.map((letter, index) => (
-            <motion.span key={index} whileHover={{ color: "#ffffff" }}>
+            <motion.span key={index} whileHover={{ color: "#E0DFDD" }}>
               {letter}
             </motion.span>
           ))}

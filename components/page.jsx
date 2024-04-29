@@ -16,7 +16,7 @@ export default function Page({ children }) {
         {children}
       </main>
       {/* placeholder to keep scroll */}
-      <div className="h-[150vh]">hello</div>
+      <div className="h-[150vh]"></div>
     </div>
   );
 }

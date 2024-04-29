@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* e0dfdd */
+
+:root {
+  --port-shadow: #5b7b7a;
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: #e0dfdd;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,16 +19,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: #5b7b7a;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: #016fb9;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: #ff6f59;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,6 +39,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --text: #161925;
   }
 
   .dark {
@@ -81,42 +89,48 @@ body {
 
 @keyframes shadow-pop-tl {
   0% {
-    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    box-shadow: 0 0 var(--port-shadow), 0 0 var(--port-shadow),
+      0 0 var(--port-shadow), 0 0 var(--port-shadow), 0 0 var(--port-shadow),
+      0 0 var(--port-shadow), 0 0 var(--port-shadow), 0 0 var(--port-shadow);
     transform: translateX(0) translateY(0);
   }
   100% {
-    box-shadow: -1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e,
-      -4px -4px #3e3e3e, -5px -5px #3e3e3e, -6px -6px #3e3e3e, -7px -7px #3e3e3e,
-      -8px -8px #3e3e3e;
+    box-shadow: -1px -1px var(--port-shadow), -2px -2px var(--port-shadow),
+      -3px -3px var(--port-shadow), -4px -4px var(--port-shadow),
+      -5px -5px var(--port-shadow), -6px -6px var(--port-shadow),
+      -7px -7px var(--port-shadow), -8px -8px var(--port-shadow);
     transform: translateX(8px) translateY(8px);
   }
 }
 
 @keyframes shadow-pop-hov {
   0% {
-    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    box-shadow: 0 0 var(--port-shadow), 0 0 var(--port-shadow),
+      0 0 var(--port-shadow), 0 0 var(--port-shadow), 0 0 var(--port-shadow),
+      0 0 var(--port-shadow), 0 0 var(--port-shadow), 0 0 var(--port-shadow);
     transform: translateX(0) translateY(0);
   }
   100% {
-    box-shadow: -1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e,
-      -4px -4px #3e3e3e, -5px -5px #3e3e3e, -6px -6px #3e3e3e, -7px -7px #3e3e3e,
-      -8px -8px #3e3e3e;
+    box-shadow: -1px -1px var(--port-shadow), -2px -2px var(--port-shadow),
+      -3px -3px var(--port-shadow), -4px -4px var(--port-shadow),
+      -5px -5px var(--port-shadow), -6px -6px var(--port-shadow),
+      -7px -7px var(--port-shadow), -8px -8px var(--port-shadow);
     transform: translateX(8px) translateY(8px);
   }
 }
 
 @keyframes shadow-pop-rev {
   0% {
-    box-shadow: -1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e,
-      -4px -4px #3e3e3e, -5px -5px #3e3e3e, -6px -6px #3e3e3e, -7px -7px #3e3e3e,
-      -8px -8px #3e3e3e;
+    box-shadow: -1px -1px var(--port-shadow), -2px -2px var(--port-shadow),
+      -3px -3px var(--port-shadow), -4px -4px var(--port-shadow),
+      -5px -5px var(--port-shadow), -6px -6px var(--port-shadow),
+      -7px -7px var(--port-shadow), -8px -8px var(--port-shadow);
     transform: translateX(8px) translateY(8px);
   }
   100% {
-    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
-      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    box-shadow: 0 0 var(--port-shadow), 0 0 #3e3e3e, 0 0 var(--port-shadow),
+      0 0 var(--port-shadow), 0 0 var(--port-shadow), 0 0 var(--port-shadow),
+      0 0 var(--port-shadow), 0 0 var(--port-shadow);
     transform: translateX(0) translateY(0);
   }
 }
@@ -131,10 +145,41 @@ body {
 
 @media (min-width: 740px) {
   .shadow-pop-tl:hover {
-    background-color: #e7e7e7;
+    background-color: #ff6f59;
   }
 }
 
 .scrollable-content::-webkit-scrollbar {
   display: none;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+
+section {
+  padding-top: 85vh;
+  padding-bottom: 85vh;
+  position: relative;
 }

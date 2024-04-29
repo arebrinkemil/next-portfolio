@@ -8,7 +8,7 @@ export default function Contact() {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.25],
-    ["#9e9b94", "#522222"],
+    ["#016fb9", "#E0DFDD"],
     "clamp"
   );
 

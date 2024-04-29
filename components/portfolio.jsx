@@ -1,134 +1,117 @@
 import ProjectCard from "./projectcard";
+import Image from "next/image";
+import { ComingSoonCard } from "./morecoming.";
+
+import carapp from "../public/carapp.png";
+import chat from "../public/chat.png";
+import event from "../public/event.png";
+import langdle from "../public/langdle.png";
+import portfolio from "../public/portfolio.png";
+import protech from "../public/protech.png";
+import waterworks from "../public/waterworks.png";
 
 export default function Portfolio() {
   const projects = [
     {
-      title: "E-commerce Website",
+      title: "LIA EVENT",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut arcu nec eros vestibulum condimentum. Integer id ligula convallis, vulputate nisl at, malesuada mi",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: false,
-      languageArray: ["JavaScript", "HTML", "CSS"],
-      technologyArray: ["React", "Redux", "Node.js"],
+        "This MERN stack application is designed to provide companies with essential information about upcoming events and allows them to create descriptive posts about their involvement. Developed collaboratively by Emil Årebrink and Anton Bernhardsson Yttring as part of a group project, this platform bridges the gap between companies and event participants.",
+      link: "https://liaevent.arebr.ink/",
+      repository: "https://github.com/arebrinkemil/LIA-EVENT",
+      image: event,
+      finished: true,
+      languageArray: ["JavaScript", "CSS", "Mongoose"],
+      technologyArray: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "JWT",
+      ],
       date: "2022-03-15",
     },
     {
-      title: "Task Management App",
+      title: "RENT A CAR",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec velit nisi. Nullam eu massa ac tellus iaculis consequat non nec dui. Integer nec leo et q.",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
+        "RentACar is a collaborative school assignment project built using Laravel with a theme related to cars. The website serves as a car rental platform where users can sign up, log in, search for cars based on start date, end date, pickup location, and the number of passengers. Users can then proceed to book the desired car. Additionally, users can view their booked cars, edit bookings, and delete them as needed.",
+      link: "",
+      repository: "https://github.com/hugosandsjo/rentacar",
+      image: carapp,
+      finished: false,
+      languageArray: ["PHP", "BLADE", "CSS", "JavaScript"],
+      technologyArray: ["Laravel", "MySql"],
+      date: "2022-03-15",
+    },
+    {
+      title: "CHAT APP",
+      description:
+        "A simple chat app made with React and firebase. You can sign in with google and chat with other users by entering a chat room with the same name.",
+      link: "https://react-chat-lac.vercel.app",
+      repository: "https://github.com/arebrinkemil/reactChat",
+      image: chat,
       finished: true,
-      languageArray: ["JavaScript", "Python"],
-      technologyArray: ["Vue.js", "Django"],
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: ["React", "Firebase"],
       date: "2022-04-20",
     },
     {
-      title: "Portfolio Website",
+      title: "PORTFOLIO",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi sollicitudin, vehicula nisi vel, scelerisque erat. Duis nec nunc at nisi varius suscipit.",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: false,
-      languageArray: ["JavaScript", "HTML", "CSS"],
-      technologyArray: ["React", "Gatsby"],
+        "This is my personal portfolio website. It is built with Next.js and Tailwind CSS. This is the site your are currently visiting.",
+      link: "https://www.arebr.ink",
+      repository: "https://github.com/arebrinkemil/next-portfolio",
+      image: portfolio,
+      finished: true,
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: ["React", "Next.js", "Tailwind CSS"],
       date: "2022-05-10",
     },
     {
-      title: "Recipe Sharing App",
+      title: "LANGDLE",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque aliquam ante, vitae tempus sapien rhoncus vel. Aliquam erat volutpat. Aenean vehinia.",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
+        "This i a clone of the popular game wordle. The game is built with React and Tailwind CSS. The game is a word puzzle game where you have to guess a 5 letter word in 6 tries. The diffrence is that the words are generated from the ChatGPT API and it lets you pick between swedish and english.",
+      link: "https://langdle.vercel.app/",
+      repository: "https://github.com/arebrinkemil/langdle",
+      image: langdle,
       finished: true,
-      languageArray: ["JavaScript", "Ruby"],
-      technologyArray: ["Angular", "Ruby on Rails"],
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: ["React", "Tailwind CSS", "ChatGPT API"],
       date: "2022-06-25",
     },
     {
-      title: "Blog Platform",
+      title: "PROTECH",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce laoreet fermentum augue non gravida. In hac habitasse platea dictumst. Proin vehicula hendrerittique.",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: false,
-      languageArray: ["JavaScript", "PHP"],
-      technologyArray: ["React", "Laravel"],
+        "Protech is a group project with the design class. The goal was to build a website for a fictional company. The website is built with HTML, CSS and JavaScript. The website is a landing page for a company that sells protective gear for sports. The website is responsive and has a clean design.",
+      link: "https://github.com/arebrinkemil/ProTech-gruppProjekt",
+      repository: "https://pro-tech-three.vercel.app/",
+      image: protech,
+      finished: true,
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: [""],
       date: "2022-07-12",
     },
     {
-      title: "Social Media Dashboard",
+      title: "WATERWORKS",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed urna diam. Donec et aliquam metus. Curabitur viverra auctor lacus. Nam id odio non ligula ",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: false,
-      languageArray: ["JavaScript", "Python"],
-      technologyArray: ["Vue.js", "Flask"],
+        "This was a group project and we built an application that utilizes the Gothenburg RiverService API to fetch water levels and elevation data for various lakes and rivers around Gothenburg",
+      link: "https://waterworks-azure.vercel.app/",
+      repository: "https://github.com/vojtechlevi/waterworks",
+      image: waterworks,
+      finished: true,
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: ["vite", "tailwindcss", "js modules", "threejs"],
       date: "2022-08-30",
-    },
-    {
-      title: "Online Learning Platform",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet, velit eu cursus convallis, nunc felis faucib.",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: true,
-      languageArray: ["JavaScript", "Java"],
-      technologyArray: ["Angular", "Spring Boot"],
-      date: "2022-09-18",
-    },
-    {
-      title: "Finance Tracker",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id quam a ex facilisis vulputate. Morbi fringil",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: true,
-      languageArray: ["JavaScript", "Ruby"],
-      technologyArray: ["React", "Ruby on Rails"],
-      date: "2022-10-05",
-    },
-    {
-      title: "Weather Forecast App",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet est at felis vehicula blandit.",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: true,
-      languageArray: ["JavaScript", "Python"],
-      technologyArray: ["React", "Django"],
-      date: "2022-11-20",
-    },
-    {
-      title: "Event Management System",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae enim sed odio facilisis cursus. Nulla facilisi. Duis vel fermentum orci",
-      link: "https://www.example.com",
-      repository: "https://www.github.com/example",
-      image: "https://via.placeholder.com/1500",
-      finished: true,
-      languageArray: ["JavaScript", "PHP"],
-      technologyArray: ["Vue.js", "Laravel"],
-      date: "2022-12-10",
     },
   ];
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-bold font-poppins mt-16">Portfolio</h1>
-        <p className="text-gray-600 mt-4">
+      <div className="flex flex-col items-center justify-center bg-background">
+        <h1 className="text-4xl font-bold font-poppins mt-16 text-text">
+          PORTFOLIO
+        </h1>
+        <p className="text-xl text-text mt-4">
           Here are some of the projects I have worked on.
         </p>
       </div>
@@ -138,6 +121,7 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
+          <ComingSoonCard />
         </div>
       </div>
     </>

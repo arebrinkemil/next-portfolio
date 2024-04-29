@@ -2,14 +2,15 @@ import { useEffect } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Page from "@/components/page";
 import AnimatedH1 from "@/components/animatedh1";
-import { Carousels } from "@/components/carousels";
+import { Personal } from "@/components/personal";
+import Skills from "@/components/skills";
 
 export default function About() {
   const { scrollYProgress } = useScroll();
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.25],
-    ["#9e9b94", "#522222"],
+    ["#016fb9", "#E0DFDD"],
     "clamp"
   );
 
@@ -25,7 +26,8 @@ export default function About() {
       >
         <AnimatedH1>WEB DEVELOPER</AnimatedH1>
       </motion.div>
-      <Carousels />
+      <Skills />
+      <Personal />
     </Page>
   );
 }

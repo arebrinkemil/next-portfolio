@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 
 import {
   Dialog,
@@ -34,28 +35,26 @@ export default function ProjectCard({ project }) {
       <DialogTrigger asChild>
         <motion.div
           ref={ref}
-          className={`bg-white rounded-lg p-4 ${
+          className={`bg-white rounded-lg p-4 text-text ${
             isInView ? "shadow-pop-tl" : ""
           }`}
         >
-          <h2 className=" text-lg md:text-xl font-bold mb-2">
+          <h2 className=" text-lg md:text-xl font-bold mb-2 text-text">
             {project.title}
           </h2>
-          <p className="text-gray-600 overflow-hidden overflow-ellipsis whitespace-nowrap">
+          <p className=" overflow-hidden overflow-ellipsis whitespace-nowrap">
             {project.description}
           </p>{" "}
-          <p className="text-gray-600 hidden md:block">
+          <p className=" hidden md:block">
             Languages: {project.languageArray.join(", ")}
           </p>
-          <p className="text-gray-600 hidden md:block">
+          <p className="hidden md:block">
             Technologies: {project.technologyArray.join(", ")}
           </p>
-          <p className="text-gray-600 md:hidden">
-            {project.technologyArray.join(", ")}
-          </p>
+          <p className=" md:hidden">{project.technologyArray.join(", ")}</p>
           <div>
-            <img
-              className="w-full h-24 object-cover mt-2 hidden md:block"
+            <Image
+              className="w-full object-cover mt-2 hidden md:block rounded-lg"
               src={project.image}
               alt={project.title}
             />
@@ -89,8 +88,8 @@ export default function ProjectCard({ project }) {
             </div>
           </DialogTitle>
 
-          <img
-            className="w-full w-1/2 object-cover"
+          <Image
+            className="w-full object-cover"
             src={project.image}
             alt={project.title}
           />

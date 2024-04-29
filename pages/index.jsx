@@ -3,13 +3,14 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Page from "@/components/page";
 import AnimatedH1 from "@/components/animatedh1";
 import Portfolio from "@/components/portfolio";
+import Skills from "@/components/skills";
 
 export default function index() {
   const { scrollYProgress } = useScroll();
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 0.25],
-    ["#9e9b94", "#522222"],
+    ["#016fb9", "#E0DFDD"],
     "clamp"
   );
 
@@ -24,13 +25,13 @@ export default function index() {
         className="min-h-screen flex flex-col items-center justify-center w-full px-4"
       >
         <AnimatedH1>EMIL ÅREBRINK</AnimatedH1>
-        <div className="h-full w-full flex flex-col justify-end text-[#9e9b94]">
+        <div className="h-full w-full flex flex-col justify-end text-secondary">
           <h2 className="font-poppins text-6xl font-bold text-nowrap">
             WEB DEVELOPER
           </h2>
         </div>
       </motion.div>
-
+      <Skills />
       <Portfolio />
     </Page>
   );
