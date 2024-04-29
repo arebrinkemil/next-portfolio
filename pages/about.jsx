@@ -4,6 +4,7 @@ import Page from "@/components/page";
 import AnimatedH1 from "@/components/animatedh1";
 import { Personal } from "@/components/personal";
 import Skills from "@/components/skills";
+import { TypeAnimation } from "react-type-animation";
 
 export default function About() {
   const { scrollYProgress } = useScroll();
@@ -27,6 +28,27 @@ export default function About() {
         <AnimatedH1>WEB DEVELOPER</AnimatedH1>
       </motion.div>
       <Skills />
+      <div className="px-8">
+        <h1 className="text-8xl font-bold text-left mt-8">HELLO!</h1>
+        <h2 className="text-7xl font-semibold text-left mt-2">
+          <TypeAnimation
+            sequence={[
+              "I'm Emil Årebrink",
+              1000,
+              "I'm a Web Developer",
+              1000,
+              "I'm from Sweden",
+              1000,
+              "I'm a Student",
+              1000,
+            ]}
+            preRenderFirstString
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+          />{" "}
+        </h2>
+      </div>
       <Personal />
     </Page>
   );

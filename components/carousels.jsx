@@ -42,7 +42,7 @@ export function Carousels() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-3/4 flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1" className="w-full">
             <AccordionTrigger>
@@ -50,7 +50,7 @@ export function Carousels() {
               <h2 className="text-2xl font-bold">What im listening to</h2>
             </AccordionTrigger>
             <AccordionContent>
-              <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center bg-secondary rounded-lg">
                 <VidCarousel content={carousel1Content} />
               </div>
             </AccordionContent>
@@ -61,7 +61,7 @@ export function Carousels() {
               <h2 className="text-2xl font-bold">What im watching</h2>
             </AccordionTrigger>
             <AccordionContent>
-              <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center bg-secondary rounded-lg">
                 <ImageCarousel content={carousel2Content} />
               </div>
             </AccordionContent>
@@ -71,7 +71,7 @@ export function Carousels() {
               <h2 className="text-2xl font-bold">What im playing</h2>
             </AccordionTrigger>
             <AccordionContent>
-              <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center bg-secondary rounded-lg">
                 <ImageCarousel content={carousel3Content} />
               </div>
             </AccordionContent>

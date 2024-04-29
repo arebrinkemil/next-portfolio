@@ -29,10 +29,10 @@ export function ItemCarousel({ content }) {
 
 export function VidCarousel({ content }) {
   return (
-    <Carousel className="w-[90%]">
+    <Carousel className=" w-[80%] lg:w-[90%]">
       <CarouselContent className="-ml-1">
         {content.map((item, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/4">
+          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/4 ">
             <div className="p-1">
               <iframe
                 width="100%"
@@ -54,9 +54,12 @@ export function VidCarousel({ content }) {
 export function ImageCarousel({ content }) {
   return (
     <Carousel className="w-[90%]">
-      <CarouselContent className="-ml-1">
+      <CarouselContent className="-ml-1 ">
         {content.map((item, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            key={index}
+            className="pl-1 md:basis-1/2 lg:basis-1/3 rounded-lg "
+          >
             <div className="p-1">
               <Image
                 src={item.src}
