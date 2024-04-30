@@ -21,7 +21,7 @@ export function Personal() {
       >
         <Image
           className="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
-          src="/PFBild.jpg"
+          src="/PFbild.jpg"
           alt="Profile Picture"
           width={500}
           height={500}
