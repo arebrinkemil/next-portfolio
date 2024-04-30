@@ -1,6 +1,5 @@
 import { Carousels } from "@/components/carousels";
 import Image from "next/image";
-import PFbild from "../public/PFBild.jpg";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
@@ -22,8 +21,11 @@ export function Personal() {
       >
         <Image
           className="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
-          src={PFbild}
+          src="/PFBild.jpg"
           alt="Profile Picture"
+          width={500}
+          height={500}
+          layout="responsive"
         />
       </motion.div>
     </div>
