@@ -27,29 +27,34 @@ export default function About() {
       >
         <AnimatedH1>WEB DEVELOPER</AnimatedH1>
       </motion.div>
-      <Skills />
+
       <div className="px-8">
-        <h1 className="text-8xl font-bold text-left mt-8">HELLO!</h1>
-        <h2 className="text-7xl font-semibold text-left mt-2">
-          <TypeAnimation
-            sequence={[
-              "I'm Emil Årebrink",
-              1000,
-              "I'm a Web Developer",
-              1000,
-              "I'm from Sweden",
-              1000,
-              "I'm a Student",
-              1000,
-            ]}
-            preRenderFirstString
-            wrapper="span"
-            speed={50}
-            repeat={Infinity}
-          />{" "}
-        </h2>
+        <h1 className="text-7xl lg:text-8xl font-bold text-left mt-8">
+          HELLO!
+        </h1>
+        <div className="h-20 sm:h-16 md:h-24 lg:h-32 xl:h-32 mb-8">
+          <h2 className="text-6xl lg:text-7xl font-semibold text-left mt-2">
+            <TypeAnimation
+              sequence={[
+                "I'm Emil Årebrink",
+                1000,
+                "I'm a Web Developer",
+                1000,
+                "I'm from Sweden",
+                1000,
+                "I'm a Student",
+                1000,
+              ]}
+              preRenderFirstString
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />{" "}
+          </h2>
+        </div>
       </div>
       <Personal />
+      <Skills />
     </Page>
   );
 }
