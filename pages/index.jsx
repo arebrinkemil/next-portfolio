@@ -5,7 +5,7 @@ import AnimatedH1 from "@/components/animatedh1";
 import Portfolio from "@/components/portfolio";
 import Skills from "@/components/skills";
 
-export default function index() {
+export default function Index() {
   const { scrollYProgress } = useScroll();
   const backgroundColor = useTransform(
     scrollYProgress,
