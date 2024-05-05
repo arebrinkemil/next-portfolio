@@ -87,6 +87,38 @@ body {
   scroll-behavior: smooth;
 }
 
+@keyframes shadow-pop-tl-white {
+  0% {
+    box-shadow: 0 0 var(--background), 0 0 var(--background),
+      0 0 var(--background), 0 0 var(--background), 0 0 var(--background),
+      0 0 var(--background), 0 0 var(--background), 0 0 var(--background);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: -1px -1px var(--background), -2px -2px var(--background),
+      -3px -3px var(--background), -4px -4px var(--background),
+      -5px -5px var(--background), -6px -6px var(--background),
+      -7px -7px var(--background), -8px -8px var(--background);
+    transform: translateX(8px) translateY(8px);
+  }
+}
+
+@keyframes shadow-pop-rev-white {
+  0% {
+    box-shadow: -1px -1px var(--background), -2px -2px var(--background),
+      -3px -3px var(--background), -4px -4px var(--background),
+      -5px -5px var(--background), -6px -6px var(--background),
+      -7px -7px var(--background), -8px -8px var(--background);
+    transform: translateX(8px) translateY(8px);
+  }
+  100% {
+    box-shadow: 0 0 var(--background), 0 0 #3e3e3e, 0 0 var(--background),
+      0 0 var(--background), 0 0 var(--background), 0 0 var(--background),
+      0 0 var(--background), 0 0 var(--background);
+    transform: translateX(0) translateY(0);
+  }
+}
+
 @keyframes shadow-pop-tl {
   0% {
     box-shadow: 0 0 var(--port-shadow), 0 0 var(--port-shadow),
@@ -147,6 +179,14 @@ body {
   .shadow-pop-tl:hover {
     background-color: #ff6f59;
   }
+}
+
+.shadow-pop-tl-white {
+  animation: shadow-pop-tl-white 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67) both;
+}
+
+.shadow-pop-tl-white:active {
+  animation: shadow-pop-rev-white 0.7s cubic-bezier(0.17, 0.67, 0.83, 0.67) both;
 }
 
 .scrollable-content::-webkit-scrollbar {
