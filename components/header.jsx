@@ -8,7 +8,7 @@ const button = {
   pressed: { scale: 0.99 },
 };
 
-const navigationRoutes = ["home", "about", "contact"];
+const navigationRoutes = ["about", "projects"]; //home
 
 export default function Header() {
   const router = useRouter();
@@ -41,7 +41,7 @@ export default function Header() {
 }
 
 function NavigationLink({ href, text, router, isFirstLoad }) {
-  const isActive = router.asPath === (href === "/home" ? "/" : href);
+  const isActive = router.asPath === (href === "/about" ? "/" : href);
   const { scrollYProgress } = useScroll();
   const textColor = useTransform(
     scrollYProgress,
@@ -52,13 +52,14 @@ function NavigationLink({ href, text, router, isFirstLoad }) {
 
   return (
     <div className="w-full flex flex-row justify-around text-3xl md:text-4xl font-bold font-poppins">
-      <Link href={href === "/home" ? "/" : href} passHref>
+      <Link href={href === "/about" ? "/" : href} passHref>
         <motion.div
           style={{ color: isActive ? textColor : "#ffffff" }}
           initial={isFirstLoad ? "hidden" : "show"}
           animate="show"
           whileHover="hover"
           whileTap="pressed"
+          variants={button}
         >
           {text.toUpperCase()}
         </motion.div>

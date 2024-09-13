@@ -9,7 +9,7 @@ export function Personal() {
   const isInView = useInView(ref);
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row w-full justify-center gap-8 items-center px-8 mt-8 ">
+    <div className="flex flex-col-reverse lg:flex-row w-full justify-center gap-8 items-center px-8 py-8  mt-8 ">
       <div className="lg:w-2/3 w-full">
         <Carousels />
       </div>

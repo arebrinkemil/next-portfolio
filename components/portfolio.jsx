@@ -9,9 +9,79 @@ import langdle from "../public/langdle.png";
 import portfolio from "../public/portfolio.png";
 import protech from "../public/protech.png";
 import waterworks from "../public/waterworks.png";
+import mp3stream from "../public/mp3stream.png";
+import minify from "../public/minify.png";
 
 export default function Portfolio() {
   const projects = [
+    {
+      title: "MP3 Streamer",
+      description:
+        "A spotify clone built with Next.js and Supabase. The diffrence is that you can upload your own music and stream it from the cloud. The app is built with Next.js and Supabase. The app is still in development and will be finished soon",
+      link: "",
+      repository: "https://github.com/arebrinkemil/mp3streamer",
+      image: mp3stream,
+      finished: false,
+      languageArray: ["JavaScript", "Typescript"],
+      technologyArray: ["Next.js", "Supabase", "Tailwind CSS"],
+      date: "2024-07-15",
+    },
+    {
+      title: "Minify",
+      description:
+        "This is a URL shortener application built with Next.js, TypeScript and for validation Zod. All urls are saved in a Vercel Postgres database and the ui is using Shadcn with Tailwind.",
+      link: "https://www.arebr.ink/",
+      repository: "https://github.com/arebrinkemil/minify",
+      image: minify,
+      finished: true,
+      languageArray: ["JavaScript", "Typescript"],
+      technologyArray: [
+        "Next.js",
+        "Zod",
+        "Vercel postgres",
+        "Shadcn",
+        "Tailwind CSS",
+      ],
+      date: "2024-04-15",
+    },
+
+    {
+      title: "PORTFOLIO",
+      description:
+        "This is my personal portfolio website. It is built with Next.js and Tailwind CSS. This is the site your are currently visiting.",
+      link: "https://www.arebr.ink",
+      repository: "https://github.com/arebrinkemil/next-portfolio",
+      image: portfolio,
+      finished: true,
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: ["React", "Next.js", "Tailwind CSS"],
+      date: "2022-05-10",
+    },
+    {
+      title: "LANGDLE",
+      description:
+        "This i a clone of the popular game wordle. The game is built with React and Tailwind CSS. The game is a word puzzle game where you have to guess a 5 letter word in 6 tries. The diffrence is that the words are generated from the ChatGPT API and it lets you pick between swedish and english.",
+      link: "https://langdle.vercel.app/",
+      repository: "https://github.com/arebrinkemil/langdle",
+      image: langdle,
+      finished: true,
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: ["React", "Tailwind CSS", "ChatGPT API"],
+      date: "2022-06-25",
+    },
+
+    {
+      title: "WATERWORKS",
+      description:
+        "This was a group project and we built an application that utilizes the Gothenburg RiverService API to fetch water levels and elevation data for various lakes and rivers around Gothenburg",
+      link: "https://waterworks-azure.vercel.app/",
+      repository: "https://github.com/vojtechlevi/waterworks",
+      image: waterworks,
+      finished: true,
+      languageArray: ["JavaScript", "CSS"],
+      technologyArray: ["vite", "tailwindcss", "js modules", "threejs"],
+      date: "2022-08-30",
+    },
     {
       title: "LIA EVENT",
       description:
@@ -56,30 +126,6 @@ export default function Portfolio() {
       date: "2022-04-20",
     },
     {
-      title: "PORTFOLIO",
-      description:
-        "This is my personal portfolio website. It is built with Next.js and Tailwind CSS. This is the site your are currently visiting.",
-      link: "https://www.arebr.ink",
-      repository: "https://github.com/arebrinkemil/next-portfolio",
-      image: portfolio,
-      finished: true,
-      languageArray: ["JavaScript", "CSS"],
-      technologyArray: ["React", "Next.js", "Tailwind CSS"],
-      date: "2022-05-10",
-    },
-    {
-      title: "LANGDLE",
-      description:
-        "This i a clone of the popular game wordle. The game is built with React and Tailwind CSS. The game is a word puzzle game where you have to guess a 5 letter word in 6 tries. The diffrence is that the words are generated from the ChatGPT API and it lets you pick between swedish and english.",
-      link: "https://langdle.vercel.app/",
-      repository: "https://github.com/arebrinkemil/langdle",
-      image: langdle,
-      finished: true,
-      languageArray: ["JavaScript", "CSS"],
-      technologyArray: ["React", "Tailwind CSS", "ChatGPT API"],
-      date: "2022-06-25",
-    },
-    {
       title: "PROTECH",
       description:
         "Protech is a group project with the design class. The goal was to build a website for a fictional company. The website is built with HTML, CSS and JavaScript. The website is a landing page for a company that sells protective gear for sports. The website is responsive and has a clean design.",
@@ -90,18 +136,6 @@ export default function Portfolio() {
       languageArray: ["JavaScript", "CSS"],
       technologyArray: [""],
       date: "2022-07-12",
-    },
-    {
-      title: "WATERWORKS",
-      description:
-        "This was a group project and we built an application that utilizes the Gothenburg RiverService API to fetch water levels and elevation data for various lakes and rivers around Gothenburg",
-      link: "https://waterworks-azure.vercel.app/",
-      repository: "https://github.com/vojtechlevi/waterworks",
-      image: waterworks,
-      finished: true,
-      languageArray: ["JavaScript", "CSS"],
-      technologyArray: ["vite", "tailwindcss", "js modules", "threejs"],
-      date: "2022-08-30",
     },
   ];
 

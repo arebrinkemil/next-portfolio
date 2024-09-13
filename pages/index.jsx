@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Page from "@/components/page";
 import AnimatedH1 from "@/components/animatedh1";
-import Portfolio from "@/components/portfolio";
-import Skills from "@/components/skills";
+import { Personal } from "@/components/personal";
+import { TypeAnimation } from "react-type-animation";
+import { AboutMe } from "@/components/aboutme";
+import { ContactMe } from "@/components/contactme";
 
 export default function Index() {
   const { scrollYProgress } = useScroll();
@@ -19,20 +21,43 @@ export default function Index() {
   }, []);
 
   return (
-    <Page className="flex flex-col">
+    <Page>
       <motion.div
         style={{ backgroundColor }}
-        className="min-h-screen flex flex-col items-center justify-center w-full px-4"
+        className="min-h-screen flex items-center justify-center w-full px-4"
       >
-        <AnimatedH1>EMIL ÅREBRINK</AnimatedH1>
-        <div className="h-full w-full flex flex-col justify-end text-secondary">
-          <h2 className="font-poppins text-6xl font-bold text-nowrap">
-            WEB DEVELOPER
+        <AnimatedH1>WEB DEVELOPER</AnimatedH1>
+      </motion.div>
+
+      <div className="px-8">
+        <h1 className="text-7xl lg:text-8xl font-bold text-left mt-8">
+          HELLO!
+        </h1>
+        <div className="h-20 sm:h-16 md:h-24 lg:h-32 xl:h-32 mb-8">
+          <h2 className="text-6xl lg:text-7xl font-semibold text-left mt-2">
+            <TypeAnimation
+              sequence={[
+                "I'm Emil Årebrink",
+                1000,
+                "I'm a Web Developer",
+                1000,
+                "I'm from Sweden",
+                1000,
+                "I'm a Student",
+                1000,
+              ]}
+              preRenderFirstString
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />{" "}
           </h2>
         </div>
-      </motion.div>
-      <Skills />
-      <Portfolio />
+      </div>
+
+      <Personal />
+      <AboutMe />
+      <ContactMe />
     </Page>
   );
 }

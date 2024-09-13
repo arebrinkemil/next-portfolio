@@ -12,7 +12,7 @@ const AnimatedH1 = ({ children }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
-  if (children === "EMIL ÅREBRINK") {
+  if (children === "PELLE") {
     animation = (
       <div className="flex md:flex-row flex-col-reverse">
         <motion.div
@@ -71,13 +71,15 @@ const AnimatedH1 = ({ children }) => {
   } else if (children === "WEB DEVELOPER") {
     animation = (
       <motion.div
+        className=""
         initial={{
           textShadow: `0px 0px ${shadowColor}, 0px 0px ${shadowColor}, 0px 0px ${shadowColor}, 0px 0px ${shadowColor}, 0px 0px ${shadowColor}, 0px 0px ${shadowColor}, 0px 0px ${shadowColor}, 0px 0px ${shadowColor}`,
           x: 0,
           y: 0,
         }}
         animate={{
-          textShadow: `0 -1px ${shadowColor}, 0 -2px ${shadowColor}, 0 -3px ${shadowColor}, 0 -4px ${shadowColor}, 0 -5px ${shadowColor}, 0 -6px ${shadowColor}, 0 -7px ${shadowColor}, 0 -8px ${shadowColor}`,
+          textShadow: `-1px -1px ${shadowColor}, -2px -2px ${shadowColor}, -3px -3px ${shadowColor}, -4px -4px ${shadowColor}, -5px -5px ${shadowColor}, -6px -6px ${shadowColor}, -7px -7px ${shadowColor}, -8px -8px ${shadowColor}`,
+          x: 8,
           y: 8,
         }}
         exit={{
@@ -100,7 +102,7 @@ const AnimatedH1 = ({ children }) => {
         </h1>
       </motion.div>
     );
-  } else if (children === "MESSAGE ME") {
+  } else if (children === "PROJECTS") {
     animation = (
       <motion.div
         initial={{
