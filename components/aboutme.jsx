@@ -8,7 +8,7 @@ export function AboutMe() {
   const isInView = useInView(ref);
 
   return (
-    <div className="flex flex-col lg:flex-row w-full justify-center gap-8 items-center px-8 py-8 mt-8">
+    <div className="flex flex-col lg:flex-row w-full justify-center gap-8 items-center px-8 mt-8">
       <motion.div
         ref={ref}
         className={`lg:w-1/3 w-full rounded-lg ${
@@ -30,9 +30,9 @@ export function AboutMe() {
             About Me
           </h2>
           <p className="text-base md:text-lg lg:text-xl">
-            Hi, I'm Emil Årebrink, a 23-year-old aspiring web developer from
-            Stenungsund on the west coast of Sweden. When I'm not coding, I like
-            to spend time at sea, gaming, and listening to music.
+            Hi, I&apos;m Emil Årebrink, a 23-year-old aspiring web developer
+            from Stenungsund on the west coast of Sweden. When I&apos;m not
+            coding, I like to spend time at sea, gaming, and listening to music.
           </p>
         </div>
       </div>
