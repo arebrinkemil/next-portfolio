@@ -39,7 +39,7 @@ export default function ProjectCard({ project }) {
             isInView ? "shadow-pop-tl" : ""
           }`}
         >
-          <h2 className=" text-lg md:text-xl font-bold mb-2 text-text">
+          <h2 className=" text-lg md:text-xl font-bold mb-2 text-text overflow-hidden text-overflow-ellipsis whitespace-nowrap">
             {project.title}
           </h2>
           <p className=" overflow-hidden overflow-ellipsis whitespace-nowrap">

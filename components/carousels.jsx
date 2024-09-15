@@ -2,6 +2,15 @@ import * as React from "react";
 import { ItemCarousel, VidCarousel } from "./carousel";
 import shogunPic from "../public/shogun.png";
 import serverance from "../public/severance.jpeg";
+import battlefield from "../public/battlefield.jpg";
+import boys from "../public/boys.jpg";
+import breaking from "../public/breaking.jpg";
+import cpunk from "../public/cpunk.jpg";
+import cs2 from "../public/cs2.jpg";
+import header from "../public/header.jpg";
+import lastof from "../public/lastof.jpg";
+import office from "../public/office.jpg";
+import ror from "../public/ror.jpg";
 import { ImageCarousel } from "./carousel";
 
 import {
@@ -26,19 +35,12 @@ export function Carousels() {
   const carousel2Content = [
     shogunPic,
     serverance,
-    shogunPic,
-    serverance,
-    shogunPic,
-    serverance,
+    office,
+    breaking,
+    boys,
+    lastof,
   ];
-  const carousel3Content = [
-    shogunPic,
-    serverance,
-    shogunPic,
-    serverance,
-    shogunPic,
-    serverance,
-  ];
+  const carousel3Content = [battlefield, cpunk, cs2, ror, header];
 
   return (
     <div className="w-full flex flex-col justify-center items-center">

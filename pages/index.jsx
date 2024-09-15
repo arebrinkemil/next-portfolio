@@ -34,12 +34,12 @@ export default function Index() {
           HELLO!
         </h1>
         <div className="h-20 sm:h-16 md:h-24 lg:h-32 xl:h-32 mb-8">
-          <h2 className="text-6xl lg:text-7xl font-semibold text-left mt-2">
+          <h2 className="text-4xl lg:text-7xl font-semibold text-left mt-2">
             <TypeAnimation
               sequence={[
                 "I'm Emil Årebrink",
                 1000,
-                "I'm a Web Developer",
+                "I'm a Web Dev",
                 1000,
                 "I'm from Sweden",
                 1000,

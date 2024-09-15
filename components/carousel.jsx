@@ -29,7 +29,7 @@ export function ItemCarousel({ content }) {
 
 export function VidCarousel({ content }) {
   return (
-    <Carousel className=" w-[80%] lg:w-[90%]">
+    <Carousel className=" w-[60%] lg:w-[90%]">
       <CarouselContent className="-ml-1">
         {content.map((item, index) => (
           <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/4 ">
@@ -53,7 +53,7 @@ export function VidCarousel({ content }) {
 
 export function ImageCarousel({ content }) {
   return (
-    <Carousel className="w-[90%]">
+    <Carousel className="w-[60%] lg:w-[90%]">
       <CarouselContent className="-ml-1 ">
         {content.map((item, index) => (
           <CarouselItem
